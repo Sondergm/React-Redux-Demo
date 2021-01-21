@@ -40,10 +40,11 @@ export default class Count extends Component {
 
   render() {
     const { value } = this.state
-    const { count } = this.props
+    const { count, person } = this.props
     return (
       <div>
-        <h2>当前求和为：{count}</h2>
+        <h2>Count组件，Person组件总人数为{person.length}</h2>
+        <h3>当前求和为：{count}</h3>
         <select name="num" id="num" defaultChecked={value} onChange={this.selectValue}>
           <option value="1">1</option>
           <option value="2">2</option>
